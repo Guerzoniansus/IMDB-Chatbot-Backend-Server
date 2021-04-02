@@ -6,6 +6,9 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 
 public class QuestionTwo implements Question {
+
+    // Welke acteurs / actrices hebben in de meeste films gespeeld met een rating van een 9 of hoger?
+
     private final String query = "WITH mydata AS( " +
             "SELECT actor.personid, actor.primaryname, count(*) AS appearances " +
             "FROM acts_in, actor, title " +

@@ -6,7 +6,8 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 
 public class QuestionFive implements Question{
-//Welk filmgenre heeft in verhouding het minste budget nodig voor de hoogste rating?
+
+    // Welk filmgenre heeft in verhouding het minste budget nodig voor de hoogste rating?
 
     private final String query = "WITH mydata AS ( " +
             "SELECT genre.genre, AVG(title.cost) AS average_costs, AVG(title.rating) AS average_rating " +
@@ -19,6 +20,7 @@ public class QuestionFive implements Question{
             "SELECT genre, max_rating, min_cost " +
             "FROM mydata, highest_rating, lowest_cost " +
             "WHERE average_rating = max_rating; ";
+
     @Override
     public String getAnswer() {
         try {

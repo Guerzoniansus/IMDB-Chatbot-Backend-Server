@@ -7,6 +7,8 @@ import java.sql.SQLException;
 
 public class QuestionOne implements Question {
 
+    // Welk filmgenre heeft gemiddeld de hoogste rating?
+
     private final String query = "SELECT genre, AVG(title.rating) AS average_rating " +
             "FROM public.genre, public.title " +
             "WHERE genre.titleid = title.titleid " +

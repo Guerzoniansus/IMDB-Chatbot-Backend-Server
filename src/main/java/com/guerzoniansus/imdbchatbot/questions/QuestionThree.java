@@ -6,6 +6,9 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 
 public class QuestionThree implements Question {
+
+    // Welke acteur/actrice heeft in de meeste films geacteerd die onder het hoogst gewaardeerde genre valt?
+
     private final String query = "WITH mydata AS( " +
             "SELECT actor.primaryname, COUNT(actor.primaryname) AS appearances " +
             "FROM public.actor, public.acts_in, public.genre " +
