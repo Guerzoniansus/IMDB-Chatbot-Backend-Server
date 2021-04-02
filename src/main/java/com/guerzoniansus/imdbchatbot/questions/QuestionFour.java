@@ -5,15 +5,14 @@ import com.guerzoniansus.imdbchatbot.Database;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-public class QuestionOne implements Question {
+public class QuestionFour implements Question{
 
-    private final String query = "SELECT genre, AVG(title.rating) AS average_rating " +
-            "FROM public.genre, public.title " +
-            "WHERE genre.titleid = title.titleid " +
+    private final String query = "SELECT genre.genre, AVG(title.cost) AS average_costs " +
+            "FROM title, genre " +
+            "WHERE title.titleid = genre.titleid " +
             "GROUP BY genre " +
-            "ORDER BY average_rating DESC " +
-            "LIMIT 1;";
-
+            "ORDER BY average_costs DESC " +
+            "LIMIT 1; ";
     @Override
     public String getAnswer() {
         try {
@@ -21,9 +20,9 @@ public class QuestionOne implements Question {
 
             while (result.next()) {
                 String genre = result.getString("genre");
-                int rating = result.getInt("average_rating");
+                int budget = result.getInt("average_costs");
 
-                return "Het hoogst gewaardeerde genre is " + genre.toLowerCase() + " met een rating van " + rating + ".";
+                return "Het filmgenre " + genre.toLowerCase() + " heeft gemiddeld het hoogste budget en dat budget is: $" + budget + ".";
             }
 
         }

@@ -6,7 +6,7 @@ public class Database {
 
     private static final String DB_URL = "localhost:5432/IMDB";
     private static final String USER = "postgres";
-    private static final String PASSWORD = "464646";
+    private static final String PASSWORD = "admin";
 
     private Database() {
 
