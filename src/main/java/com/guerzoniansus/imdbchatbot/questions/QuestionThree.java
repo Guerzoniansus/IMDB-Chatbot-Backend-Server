@@ -18,7 +18,6 @@ public class QuestionThree implements Question {
             "SELECT primaryname, appearances FROM mydata, actors WHERE appearances = max_appearances; ";
 
 
-
     @Override
     public String getAnswer() {
         String actorNames = "";
@@ -30,15 +29,15 @@ public class QuestionThree implements Question {
             while (result.next()) {
                 appearance = result.getInt("appearances");
 
-                if(result.isFirst())
+                if (result.isFirst())
                     actorNames += result.getString("primaryname");
-                else if(result.isLast())
+                else if (result.isLast())
                     actorNames += " en " + result.getString("primaryname");
                 else
                     actorNames += ", " + result.getString("primaryname");
 
             }
-            return "De acteurs: " + actorNames + " hebben " + appearance + " keer  in een film gespeeld die onder het hoogst gewaardeerde genre valt.";
+            return "De acteurs/actrices die het meest in het hoogst gewaardeerde genre (documentary) hebben gespeeld (" + appearance + " keer) zijn : " + actorNames + ".";
 
         } catch (SQLException e) {
             System.out.print(e.getMessage());

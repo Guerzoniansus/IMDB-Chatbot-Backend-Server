@@ -35,7 +35,7 @@ public class QuestionTwo implements Question {
                     appearance = result.getInt("appearances");
 
             }
-            return "De acteurs/actrices: " + actorNames + " hebben " + appearance + " keer  in een film gespeeld met een rating van 9 of hoger.";
+            return "De acteurs/actrices " + actorNames + " hebben " + appearance + " keer  in een film gespeeld met een rating van 9 of hoger.";
 
         } catch (SQLException e) {
             System.out.print(e.getMessage());

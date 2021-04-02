@@ -23,7 +23,7 @@ public class QuestionOne implements Question {
                 String genre = result.getString("genre");
                 int rating = result.getInt("average_rating");
 
-                return "Het hoogst gewaardeerde genre is " + genre.toLowerCase() + " met een rating van " + rating + ".";
+                return "Het hoogst gewaardeerde genre is " + genre.toLowerCase() + " en heeft een rating van " + rating + ".";
             }
 
         }
