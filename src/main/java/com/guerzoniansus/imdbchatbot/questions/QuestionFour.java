@@ -24,7 +24,7 @@ public class QuestionFour implements Question{
                 String genre = result.getString("genre");
                 int budget = result.getInt("average_costs");
 
-                return "Het filmgenre " + genre.toLowerCase() + " heeft gemiddeld het hoogste budget en dat budget is: $" + budget + ".";
+                return "Het filmgenre " + genre.toLowerCase() + " heeft gemiddeld het hoogste budget en dat budget is $" + budget + ".";
             }
 
         }

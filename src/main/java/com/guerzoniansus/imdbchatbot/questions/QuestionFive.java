@@ -31,7 +31,8 @@ public class QuestionFive implements Question{
                 int budget = result.getInt("min_cost");
                 int rating = result.getInt("max_rating");
 
-                return "Het filmgenre " + genre.toLowerCase() + " heeft gemiddeld een budget nodig van: $" + budget + " nodig voor een rating van "+ rating +".";
+                return "Het filmgenre " + genre.toLowerCase() + " gebruikt gemiddeld een budget van $" + budget +
+                        " en heeft gemiddeld een rating van " + rating +".";
             }
 
         }

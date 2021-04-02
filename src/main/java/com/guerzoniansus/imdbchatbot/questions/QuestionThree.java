@@ -40,7 +40,7 @@ public class QuestionThree implements Question {
                     actorNames += ", " + result.getString("primaryname");
 
             }
-            return "De acteurs/actrices die het meest in het hoogst gewaardeerde genre (documentary) hebben gespeeld (" + appearance + " keer) zijn: " + actorNames + ".";
+            return "De acteurs/actrices die het meest in het hoogst gewaardeerde genre (Documentary) hebben gespeeld (" + appearance + " keer) zijn: " + actorNames + ".";
 
         } catch (SQLException e) {
             System.out.print(e.getMessage());
