@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class DatabaseController {
 
     @RequestMapping("/")
-    public String handleDatabaseReuqests(@RequestParam String question) {
+    public String handleDatabaseRequests(@RequestParam String question) {
         switch (question) {
             case "1":
                 return new QuestionOne().getAnswer();
